@@ -1,0 +1,102 @@
+
+body{
+    font-family: "Montserrat", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.content{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+ /* navbar */
+.navbar{
+    height: 5rem;
+    width: 100%;
+    background-color: white !important;
+}
+
+
+/* footer */ 
+.f-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ebebeb;
+    height: 7rem;
+}
+
+.f-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-links a:hover {
+    text-decoration: underline;
+}
+.f-socail{
+    font-size: 20px;
+}
+
+/* index cards */
+.card{
+    border: none !important;
+    margin-top: 2rem !important;
+}
+.fixed-img {
+    width: 100%;
+    height: 200px;       
+    object-fit: cover;   
+    border-radius: 5px;
+  }
+.row a{
+    text-decoration: none;
+}
+
+/*card effect*/
+.card-img-overlay{
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: #fff;
+}
+
+/*new page style*/
+.list-btn {
+    background-color: #e63946;   /* soft red */
+    color: white;
+    border: none;
+    border-radius: 50px;        /* capsule shape */
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* smooth hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.list-btn:hover {
+    background-color: white !important;
+    color: #e63946 !important;
+    border: 2px solid #e63946 !important;
+    transform: translateY(-2px);  /* lift effect */
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.list-btn:active {
+    transform: translateY(0);  /* reset on click */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* show page*/
+.show-img {
+    height: 30vh;
+    object-fit: cover; /* image crop karke fit karega */
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  

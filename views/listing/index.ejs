@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rentify</title>
-</head>
-<body>
-    <h3>all listings</h3>
-    <form method="get" action="/listings/new">
-        <button>Add new listing</button>
-    </form>
-    <ul>
-        <%for(let listing of listings){%>
-            <li><a href="/listings/<%=listing._id%>"><%=listing.title%></a></li>
-        <%}%>
-    </ul>
-</body>
-</html>
+<% layout("layouts/boilerplate") %>
+    <h3 style="margin-top: 6px;">All listings</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+        <% for(let listing of listings) { %>
+        <a href="/listings/<%= listing._id %>" class="listing-place">
+          <div class="col">
+            <div class="card h-100">
+              <img src="<%= listing.image %>" class="card-img-top fixed-img" alt="listing image">
+              <div class="card-img-overlay">
+                <h4>Rentify</h4>
+              </div>
+              <div class="card-body ">
+                <h5 class="card-title"><%= listing.title %></h5>
+                <p class="card-price">₹ <%= listing.price.toLocaleString("en-IN") %> / Night</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <% } %>
+    </div>
+      
+      
+
