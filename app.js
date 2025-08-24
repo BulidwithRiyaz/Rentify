@@ -20,6 +20,11 @@ async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/Rentify');
 }
 
+// (/) route
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+})
+
 
 // index route
 app.get("/listings", async(req,res)=>{
